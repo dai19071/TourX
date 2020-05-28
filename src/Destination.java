@@ -1,13 +1,10 @@
 import java.io.Serializable;
 import java.util.ArrayList;
 
-
-//klasi gia toys proorismoys ton taxidion
-
 public class Destination implements Serializable{
 
-	private String name;		//onoma proorismoy
-    private ArrayList<String> activities;    //drastiriotites poy einai diathesimes ston sigkekrimeno proorismo
+	private String name;
+    private ArrayList<String> activities;
 
     public Destination() {
         name = "";
