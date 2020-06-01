@@ -10,3 +10,7 @@
 /WelcomeGUI$ButtonListener.class
 /UserLogged.class
 /UserLogged$ButtonListener.class
+/LoginGUI.class
+/LoginGUI$ButtonListener.class
+/RegisterGUI.class
+/RegisterGUI$ButtonListener.class
