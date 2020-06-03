@@ -45,9 +45,7 @@ private JPanel panel = new JPanel();
 		catch(ClassNotFoundException c) {
 			c.printStackTrace();
 		}
-		finally {
-			System.out.println("De-Serialization Attempted...");
-		}	
+		
 		panel.setBackground(Color.WHITE);
 		
 		this.setContentPane(panel);
@@ -60,13 +58,31 @@ private JPanel panel = new JPanel();
 		this.setLocationRelativeTo(null);
 		panel.setLayout(null);
 		
+		usernameLabel.setFont(new Font("Tahoma", Font.BOLD, 12));
+		usernameLabel.setForeground(new Color(204, 0, 51));
+		usernameLabel.setBounds(73, 52, 69, 14);
+		
 		
 		panel.add(usernameLabel);
+		username.setBounds(141, 49, 86, 20);
 		panel.add(username);
+		passwordLabel.setFont(new Font("Tahoma", Font.BOLD, 12));
+		passwordLabel.setForeground(new Color(0, 153, 204));
+		passwordLabel.setBounds(73, 83, 69, 14);
 		panel.add(passwordLabel);
+		password.setBounds(141, 80, 86, 20);
 		panel.add(password);
-		panel.add(loginButton);
+		registerButton.setBounds(35, 127, 100, 23);
+		
 		panel.add(registerButton);
+		loginButton.setBounds(148, 127, 100, 23);
+		panel.add(loginButton);
+		
+		JLabel lblNewLabel = new JLabel("Tour-X");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(108, 11, 69, 14);
+		panel.add(lblNewLabel);
 		
 		
 		ButtonListener listener = new ButtonListener();

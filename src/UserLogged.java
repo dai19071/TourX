@@ -77,12 +77,12 @@ public class UserLogged extends JFrame{
 			if(e.getSource().equals(Traveller))
 			{
 				dispose();
-				//LoginGUI loginFrame = new LoginGUI();
+				LoginGUI loginFrame = new LoginGUI();
 			}
 			else
 			{
 				dispose();
-				//AdminGUI loginAdminFrame = new AdminGUI();
+				AdminGUI loginAdminFrame = new AdminGUI();
 				
 			}
 			

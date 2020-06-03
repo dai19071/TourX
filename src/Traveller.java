@@ -9,7 +9,7 @@ public class Traveller extends User implements Serializable{
 	private ArrayList<Reward> rewardsOwned = new ArrayList<Reward>();
 	private int travelPoints;
 	
-	public Traveller(String username, String password) {
+	public Traveller(String username, String password,String name) {
 		super(username, password);
 		this.name = name;
 		travelPoints = 0;

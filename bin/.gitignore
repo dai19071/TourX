@@ -14,3 +14,7 @@
 /LoginGUI$ButtonListener.class
 /RegisterGUI.class
 /RegisterGUI$ButtonListener.class
+/AdminGUI.class
+/HomepageGUI.class
+/HomepageGUI$ButtonListener.class
+/AdminGUI$ButtonListener.class
