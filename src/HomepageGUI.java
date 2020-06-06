@@ -100,7 +100,7 @@ public class HomepageGUI extends JFrame{
 			{
 				//Του παρεχει την ικανοτητα να λαβει τα δωρα του αναλογα με τους ποντους που εχει κερδισει
 				dispose();
-			//	ExploreMyRewardsGUI rewards = new ExploreMyRewardsGUI();
+				ExploreMyRewardsGUI rewards = new ExploreMyRewardsGUI();
 			}
 			else if(e.getSource().equals(joinAGroupTrip))
 			{
@@ -112,7 +112,7 @@ public class HomepageGUI extends JFrame{
 			{
 				//Του παρεχει την ικανοτητα να κλεισει ενα ταξιδι μονος του.
 				dispose();
-			//	PlanATrip trip = new PlanATrip(currentTraveller);
+				PlanATrip trip = new PlanATrip(currentTraveller);
 			}
 			
 		}
