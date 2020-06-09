@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import javax.swing.*;
 import java.awt.Color;
 import java.awt.Font;
-
+//Κλάση που χρησιμοποιείται για την επεξεργασία των προορισμών από τον admin
 public class DestAdminGUI extends JFrame{
 	
 	private JPanel panel = new JPanel();
@@ -24,6 +24,7 @@ public class DestAdminGUI extends JFrame{
 	public DestAdminGUI() {
 		panel.setBackground(new Color(0, 153, 153));
 		this.setContentPane(panel);
+		//Ανάκτηση προορισμών
 		try {
 			FileInputStream fileIn = new FileInputStream("destination.ser");
 			ObjectInputStream in = new ObjectInputStream(fileIn);
@@ -41,7 +42,7 @@ public class DestAdminGUI extends JFrame{
 			System.out.println("De-Serialization Attempted...");
 		
 		}
-		
+		//Ανάκτηση δραστηριοτήτων
 		try {
 			FileInputStream fileIn = new FileInputStream("activities.ser");
 			ObjectInputStream in = new ObjectInputStream(fileIn);

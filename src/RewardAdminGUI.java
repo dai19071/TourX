@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import javax.swing.*;
 import java.awt.Color;
 import java.awt.Font;
-
+//Κλάση που δημιουργεί ένα παράθυρο για την επεξεργασία των δώρων από τον admin
 public class RewardAdminGUI extends JFrame{
 	
 	private JPanel panel = new JPanel();
@@ -24,6 +24,7 @@ public class RewardAdminGUI extends JFrame{
 	public RewardAdminGUI() {
 		panel.setBackground(new Color(0, 153, 153));
 		this.setContentPane(panel);
+		//Ανάκτηση δώρων
 		try {
 			FileInputStream fileIn = new FileInputStream("Rewards.ser");
 			ObjectInputStream in = new ObjectInputStream(fileIn);

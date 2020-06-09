@@ -1,23 +1,13 @@
 
-import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.ArrayList;
 
-import javax.swing.DefaultListModel;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-
+import javax.swing.*;
+import java.awt.Color;
+import java.awt.Font;
+//Κλάση που δημιουργεί ένα παράθυρο για την επεξεργασία των γκρουπ από τον admin
 public class GroupAdminGUI extends JFrame{
 	
 	private JPanel panel = new JPanel();
@@ -46,6 +36,7 @@ public class GroupAdminGUI extends JFrame{
 	public GroupAdminGUI() {
 		panel.setBackground(new Color(0, 153, 153));
 		this.setContentPane(panel);
+		//Ανάκτηση εισιτηρίων
 		try {
 			FileInputStream fileIn = new FileInputStream("tickets.ser");
 			ObjectInputStream in = new ObjectInputStream(fileIn);
@@ -63,7 +54,7 @@ public class GroupAdminGUI extends JFrame{
 			System.out.println("De-Serialization Attempted...");
 		
 		}
-		
+		//Ανάκτηση προορισμών
 		try {
 			FileInputStream fileIn = new FileInputStream("destination.ser");
 			ObjectInputStream in = new ObjectInputStream(fileIn);
@@ -81,7 +72,7 @@ public class GroupAdminGUI extends JFrame{
 			System.out.println("De-Serialization Attempted...");
 		
 		}
-		
+		//Ανάκτηση ξενοδοχείων
 		try {
 			FileInputStream fileIn = new FileInputStream("hotels.ser");
 			ObjectInputStream in = new ObjectInputStream(fileIn);
@@ -99,7 +90,7 @@ public class GroupAdminGUI extends JFrame{
 			System.out.println("De-Serialization Attempted...");
 		
 		}
-		
+		//Ανάκτηση γκρουπ
 		try {
 			FileInputStream fileIn = new FileInputStream("groups.ser");
 			ObjectInputStream in = new ObjectInputStream(fileIn);

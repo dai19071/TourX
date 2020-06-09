@@ -25,6 +25,7 @@ public class TicketsAdminGUI extends JFrame{
 	public TicketsAdminGUI() {
 		panel.setBackground(new Color(0, 139, 139));
 		this.setContentPane(panel);
+		//Ανάκτηση εισιτηρίων
 		try {
 			FileInputStream fileIn = new FileInputStream("tickets.ser");
 			ObjectInputStream in = new ObjectInputStream(fileIn);
@@ -42,7 +43,7 @@ public class TicketsAdminGUI extends JFrame{
 			System.out.println("De-Serialization Attempted...");
 		
 		}
-		
+		//Ανάκτηση προορισμών
 		try {
 			FileInputStream fileIn = new FileInputStream("destination.ser");
 			ObjectInputStream in = new ObjectInputStream(fileIn);

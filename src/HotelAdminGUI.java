@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import java.awt.Font;
 import java.awt.Color;
-
+//Κλάση που δημιουργεί ένα παράθυρο για την επεξεργασία των ξενοδοχείων από τον admin
 public class HotelAdminGUI extends JFrame{
 	
 	private JPanel panel = new JPanel();
@@ -35,7 +35,7 @@ public class HotelAdminGUI extends JFrame{
 	public HotelAdminGUI() {
 		panel.setBackground(new Color(0, 139, 139));
 		this.setContentPane(panel);
-		
+		//Ανάκτηση ξενοδοχείων
 		try {
 			FileInputStream fileIn = new FileInputStream("hotels.ser");
 			ObjectInputStream in = new ObjectInputStream(fileIn);
@@ -53,7 +53,7 @@ public class HotelAdminGUI extends JFrame{
 			System.out.println("De-Serialization Attempted...");
 		
 		}
-		
+		//Ανάκτηση προορισμών
 		try {
 			FileInputStream fileIn = new FileInputStream("destination.ser");
 			ObjectInputStream in = new ObjectInputStream(fileIn);
