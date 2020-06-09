@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import java.awt.Font;
 import java.awt.Color;
-
+//Κλάση για την εξαργύρωση των πόντων και την απόκτηση δώρων από τον χρήστη
 public class ExploreMyRewardsGUI extends JFrame{
 	
 	private JPanel panel = new JPanel();
@@ -60,8 +60,12 @@ public class ExploreMyRewardsGUI extends JFrame{
 		catch(ClassNotFoundException c) {
 			c.printStackTrace();
 		}
+		panel.setBackground(Color.WHITE);
 		
-				
+		
+		
+		
+		
 		//Add available rewards in availableRewardsList
 		for(Reward r: rewards)
 			model1.addElement(r.getName());
@@ -88,17 +92,29 @@ public class ExploreMyRewardsGUI extends JFrame{
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		panel.setLayout(null);
-		
+		availableRewards.setForeground(new Color(0, 153, 153));
+		availableRewards.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		availableRewards.setBounds(370, 68, 129, 20);
 		
 		panel.add(availableRewards);
 		panel.add(availableRewardsList);
-
+		yourRewards.setForeground(new Color(0, 153, 153));
+		yourRewards.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		yourRewards.setBounds(30, 68, 126, 20);
 		
 		panel.add(yourRewards);
 		panel.add(yourRewardsList);
+		back.setBounds(475, 281, 65, 23);
 		
 		panel.add(back);
+		claimReward.setBounds(550, 281, 97, 23);
 		panel.add(claimReward);
+		
+		
+		redeemPointsLabel.setForeground(new Color(204, 0, 0));
+		redeemPointsLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
+		redeemPointsLabel.setBackground(new Color(204, 0, 0));
+		redeemPointsLabel.setBounds(30, 16, 301, 20);
 		
 		panel.add(redeemPointsLabel);
 		
@@ -115,11 +131,12 @@ public class ExploreMyRewardsGUI extends JFrame{
 	class ButtonListener implements ActionListener{
 
 		public void actionPerformed(ActionEvent e) {
-			
+			//Αν πατήσει back πάει στο homepage
 			if(e.getSource().equals(back)) {
 				dispose();
 				HomepageGUI homepage = new HomepageGUI(HomepageGUI.getTraveller());
 			}
+			//Αλλιώς γίνονται έλεγχοι για το συγκεκριμενο δώρο και αν οι πόντοι επαρκούν τότε ο χρήστης το αποκτά
 			else {
 				String claimedReward = (String)availableRewardsList.getSelectedValue();
 				boolean found = false;
