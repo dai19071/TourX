@@ -158,6 +158,7 @@ public class GroupAdminGUI extends JFrame{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			//Όταν πατηθεί το Create βγαίνει ένα νέο παράθυρο που μπορούμε να δημιουργήσουμε το Group
 			if(e.getSource().equals(create)) {
 				
 				JFrame createFrame;
@@ -252,7 +253,7 @@ public class GroupAdminGUI extends JFrame{
 							GroupTrip g = new GroupTrip(nameField.getText(),Integer.parseInt(priceField.getText()) ,Integer.parseInt(capField.getText()),selectedDestination,
 														selectedHotel, selectedTicket , travellers);
 							groups.add(g);
-							
+							//Ενημέρωση του αρχείου που κρατώνται τα γκρουπ
 							try {
 								FileOutputStream fileOutTickets = new FileOutputStream("groups.ser");
 								ObjectOutputStream out = new ObjectOutputStream(fileOutTickets);
@@ -275,7 +276,7 @@ public class GroupAdminGUI extends JFrame{
 				cancel.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 							
-							createFrame.hide();
+							createFrame.dispose();
 							GroupAdminGUI GUIA = new GroupAdminGUI();
 					}
 				});
@@ -334,7 +335,7 @@ public class GroupAdminGUI extends JFrame{
 				
 			}
 			
-			else if (e.getSource().equals(update))					//UPDATE
+			else if (e.getSource().equals(update))					//Αν πατηθεί το update τότε δημιουργείται ένα νέο παράθυρο που μπορεί να γίνει ενημέρωση των στοιχείων
 			{
 				
 			
@@ -391,7 +392,7 @@ public class GroupAdminGUI extends JFrame{
 				createPanel.add(update);
 				createPanel.add(cancel);
 				
-				hide();
+				dispose();
 				createFrame = new JFrame();
 				createFrame.setContentPane(createPanel);
 			
@@ -471,7 +472,7 @@ public class GroupAdminGUI extends JFrame{
 				
 			}
 			
-			else if (e.getSource().equals(delete))													//DELETE
+			else if (e.getSource().equals(delete))													//Αν πατήσει Delete τότε το ξενοδοχείο διαγράφεται 
 			{   hide();
 				for (GroupTrip t:groups)
 				{
