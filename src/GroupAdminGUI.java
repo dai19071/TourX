@@ -214,7 +214,7 @@ public class GroupAdminGUI extends JFrame{
 				createPanel.add(save);
 				createPanel.add(cancel);
 				
-				hide();
+				dispose();
 				createFrame = new JFrame();
 				createFrame.setContentPane(createPanel);
 			
@@ -314,7 +314,7 @@ public class GroupAdminGUI extends JFrame{
 				
 				createPanel.add(back);
 				
-				hide();
+				dispose();
 				createFrame = new JFrame();
 				createFrame.setContentPane(createPanel);
 			
@@ -328,7 +328,7 @@ public class GroupAdminGUI extends JFrame{
 				back.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 							
-							createFrame.hide();
+							createFrame.dispose();
 							GroupAdminGUI GUIA = new GroupAdminGUI();
 					}
 				});
@@ -405,7 +405,7 @@ public class GroupAdminGUI extends JFrame{
 				
 				update.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						createFrame.hide();
+						createFrame.dispose();
 						if (!nameField.getText().isEmpty())
 							selectedGroup.setName(nameField.getText());
 						if (!priceField.getText().isEmpty())
@@ -458,14 +458,14 @@ public class GroupAdminGUI extends JFrame{
 							System.out.println("Serialization Attempted Groups...");
 						}
 						
-						createFrame.hide();
+						createFrame.dispose();
 						GroupAdminGUI GUIA = new GroupAdminGUI();
 				}
 			});
 				cancel.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 							
-							createFrame.hide();
+							createFrame.dispose();
 							GroupAdminGUI GUIA = new GroupAdminGUI();
 					}
 				});
@@ -473,7 +473,7 @@ public class GroupAdminGUI extends JFrame{
 			}
 			
 			else if (e.getSource().equals(delete))													//Αν πατήσει Delete τότε το ξενοδοχείο διαγράφεται 
-			{   hide();
+			{   dispose();
 				for (GroupTrip t:groups)
 				{
 					if ( t.getName().equals(selectedGroup.getName()))
@@ -493,7 +493,7 @@ public class GroupAdminGUI extends JFrame{
 							System.out.println("Serialization Attempted Groups...");
 						}
 					
-					      hide();
+					      dispose();
 					      break;}
 					
 				}
@@ -501,7 +501,7 @@ public class GroupAdminGUI extends JFrame{
 			}
 			else
 			{
-				hide();
+				dispose();
 				new AdminHomepageGUI();
 			}
 		}}
