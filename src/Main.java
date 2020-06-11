@@ -14,7 +14,7 @@ public class Main {
 		
 		
 		//Äçìéïõñãéá ôùí Admins
-		Ádmin Ad1 = new Ádmin("stefanos","123");
+	/*	Ádmin Ad1 = new Ádmin("stefanos","123");
 		Ádmin Ad2 = new Ádmin("spuros","456");
 		Ádmin Ad3 = new Ádmin("niki","789");
 		Ádmin Ad4 = new Ádmin("mhtsos","058");
@@ -55,7 +55,7 @@ public class Main {
 		}
 		catch(IOException i) {
 			i.printStackTrace();
-		}
+		}*/
 		new WelcomeGUI();
 		
 

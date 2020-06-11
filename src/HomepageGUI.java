@@ -29,7 +29,6 @@ public class HomepageGUI extends JFrame{
 	public HomepageGUI(Traveller currentTraveller){
 		
 		this.currentTraveller = currentTraveller;
-		
 		this.setResizable(false);
 		panel.setBackground(Color.WHITE);
 		panel.setLayout(null);
@@ -92,7 +91,7 @@ public class HomepageGUI extends JFrame{
 			else if(e.getSource().equals(myAccount))
 					{
 				//Του παρεχει την ικανοτητα για αλλαγει των στοιχειων του πηγαινοντας τον σε ενα αλλο interface
-				//		myAccountGUI mine = new myAccountGUI(currentTraveller);
+						myAccountGUI mine = new myAccountGUI(currentTraveller);
 						dispose();
 						
 					}
@@ -105,7 +104,7 @@ public class HomepageGUI extends JFrame{
 			else if(e.getSource().equals(joinAGroupTrip))
 			{
 				//Του παραχει γκρουπ προς επιλογη αναλογα με τις ασχολιες του.
-			//	GroupGUI group = new GroupGUI(currentTraveller);
+				GroupGUI group = new GroupGUI(currentTraveller);
 				dispose();
 			}
 			else

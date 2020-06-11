@@ -96,7 +96,7 @@ public class AdminGUI extends JFrame{
 					{
 						dispose();
 						//Εφοσον πληκτρολογει το σωστο κωδικο τοτε εμφανιζει το παραθυρο χρησης των adminer
-						//AdminHomepageGUI hp = new AdminHomepageGUI();
+						AdminHomepageGUI hp = new AdminHomepageGUI();
 						
 					}
 					else
@@ -113,7 +113,7 @@ public class AdminGUI extends JFrame{
 							{
 								dispose();
 								//Σε περιπτωση που εβαλες τον σωστο κωδικο
-							//	AdminHomepageGUI hp = new AdminHomepageGUI();
+								AdminHomepageGUI hp = new AdminHomepageGUI();
 								userlogged = true;
 								break;
 							}

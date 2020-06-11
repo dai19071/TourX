@@ -31,6 +31,7 @@ public class SelectedDestination extends JFrame{
 		panel.setBackground(Color.WHITE);
 		this.setContentPane(panel);
 		this.dest = dest;
+		this.currentTraveller = currentTraveller;
 		panel.setLayout(null);
 		list = new JList(dest.toArray());
 		list.setFont(new Font("Tahoma", Font.PLAIN, 14));

@@ -76,10 +76,6 @@ public class SelectHotelTicketGUI extends JFrame{
 		catch(ClassNotFoundException c) {
 			c.printStackTrace();
 		}
-		finally {
-			System.out.println("De-Serialization Attempted...");
-		
-		}
 		try {
 			FileInputStream fileIn = new FileInputStream("tickets.ser");
 			ObjectInputStream in = new ObjectInputStream(fileIn);
@@ -92,10 +88,6 @@ public class SelectHotelTicketGUI extends JFrame{
 		}
 		catch(ClassNotFoundException c) {
 			c.printStackTrace();
-		}
-		finally {
-			System.out.println("De-Serialization Attempted...");
-		
 		}
 		for(Hotel h:hotels)
 		{
@@ -181,7 +173,6 @@ public class SelectHotelTicketGUI extends JFrame{
 					//ψαχνει το ξενοδοχειο που εχει επιλεξει
 					if(h.getName().equals(hotelName))
 					{
-						System.out.println(h.getCapacity());
 						if(h.getCapacity()!=0)
 						{//ελεγχει αν υπαρχει διαθεσιμο δωματιο και στην περιπτωση που υπαρχει συνεχιζει κανονικα την διαδικασια.
 							String ticketvalue = (String) ticketslist.getSelectedValue();
@@ -259,7 +250,7 @@ public class SelectHotelTicketGUI extends JFrame{
 					public void actionPerformed(ActionEvent e) {
 						if(e.getSource().equals(cancel))
 						{
-							Trippackage.dispose();
+							Trippackage.hide();
 							SelectHotelTicketGUI SelHotelandTicketGUI = new  SelectHotelTicketGUI(destination,dest,currentTraveller);
 						}
 						
@@ -272,10 +263,10 @@ public class SelectHotelTicketGUI extends JFrame{
 					public void actionPerformed(ActionEvent e) {
 						if(e.getSource().equals(finish))
 						{
-							Trippackage.dispose();
+							Trippackage.hide();
 							JFrame finishframe = new JFrame();
 							JOptionPane.showMessageDialog(finishframe, "You completed your package thank you for trusting us");
-							HomepageGUI homepage = new HomepageGUI(currentTraveller);
+							new HomepageGUI(currentTraveller);
 						}
 						
 					}

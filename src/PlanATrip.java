@@ -46,9 +46,6 @@ public class PlanATrip extends JFrame{
 		catch(ClassNotFoundException c) {
 			c.printStackTrace();
 		}
-		finally {
-			System.out.println("De-Serialization Attempted...");
-		}
 		
 		acti = new JList(Activities.toArray());
 		acti.setFont(new Font("Tahoma", Font.PLAIN, 14));
