@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
+//Ena antikeimeno GroupTrip deixnei ena olokliromeno taxidi me group kai ola ta stoixeia poy sxetizontai me ayto
+
 public class GroupTrip extends TripItem{
 
 	private Destination destination;
@@ -32,7 +34,7 @@ public class GroupTrip extends TripItem{
 		this.activities = destination.getActivities();
 	}
 	
-	public boolean TravellerExists (Traveller traveller)
+	public boolean TravellerExists (Traveller traveller)   //elegxei an enas traveller symmetexei se ena grouptrip
 	{
 		boolean found= false;
 		for (Traveller t: travellers)
@@ -42,7 +44,7 @@ public class GroupTrip extends TripItem{
 		return found;
 	}
 	
-	public void addTraveller(Traveller traveller)
+	public void addTraveller(Traveller traveller)   //prosthetei enan traveller se ena grouptrip
 	{
 		if(travellers.size()<capacity)
 			travellers.add(traveller);
